@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name = "ProductService"
+   targetNamespace = "http://www.example.org/product.wsdl"
+   xmlns = "http://schemas.xmlsoap.org/wsdl/"
+   xmlns:soap = "http://schemas.xmlsoap.org/wsdl/soap/"
+   xmlns:tns = "http://www.example.org/product.wsdl"
+   xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
+ 
+   <message name = "GetProductNameRequest">
+      <part name = "id" type = "xsd:string"/>
+   </message>
+	
+   <message name = "GetProductNameResponse">
+      <part name = "name" type = "xsd:string"/>
+   </message>
+
+   <portType name = "GetProduct_PortType">
+      <operation name = "getProductName">
+         <input message = "tns:GetProductNameRequest"/>
+         <output message = "tns:GetProductNameResponse"/>
+      </operation>
+   </portType>
+
+   <binding name = "GetProduct_Binding" type = "GetProduct_PortType">
+      <soap:binding style = "rpc"
+         transport = "http://schemas.xmlsoap.org/soap/http"/>
+      <operation name = "getProductName">
+         <soap:operation soapAction = "getProductName"/>
+         <input>
+            <soap:body
+               encodingStyle = "http://schemas.xmlsoap.org/soap/encoding/"
+               namespace = "urn:examples:productservice"
+               use = "encoded"/>
+         </input>
+		
+         <output>
+            <soap:body
+               encodingStyle = "http://schemas.xmlsoap.org/soap/encoding/"
+               namespace = "urn:examples:productservice"
+               use = "encoded"/>
+         </output>
+      </operation>
+   </binding>
+
+   <service name = "Product_Service">
+      <documentation>WSDL File for ProductService</documentation>
+      <port binding = "tns:GetProduct_Binding" name = "GetProduct_Port">
+         <soap:address
+            location = "http://www.example.org/GetProduct/" />
+      </port>
+   </service>
+</definitions>

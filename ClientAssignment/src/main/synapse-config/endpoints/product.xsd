@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/product" xmlns:tns="http://www.example.org/product" elementFormDefault="qualified">
+
+    <element name="id" type="string"></element>
+
+    <element name="name" type="string"></element>
+
+    <element name="category" type="string"></element>
+
+    <element name="price" type="integer"></element>
+</schema>

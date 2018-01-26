@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="ProductProxy" startOnLoad="true" transports="https http" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_7b594156-5f9a-4e98-ae85-9a0ca971072f">
+            <address uri="http://hrmc.com/productservice"/>
+        </endpoint>
+        <inSequence/>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+</proxy>

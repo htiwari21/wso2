@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="ProductServiceEP" xmlns="http://ws.apache.org/ns/synapse">
+    <wsdl port="8443" service="ProductService" uri="http://www.example.org/product.wsdl"/>
+</endpoint>
