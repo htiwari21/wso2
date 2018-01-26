@@ -4,7 +4,12 @@
         <endpoint name="endpoint_urn_uuid_7b594156-5f9a-4e98-ae85-9a0ca971072f">
             <address uri="http://hrmc.com/productservice"/>
         </endpoint>
-        <inSequence/>
+        <inSequence>
+            <validate description="">
+                <on-fail/>
+            </validate>
+            <conditionalRouter continueAfter="false" description=""/>
+        </inSequence>
         <outSequence>
             <send/>
         </outSequence>
