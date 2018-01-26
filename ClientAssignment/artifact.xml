@@ -5,4 +5,7 @@
     <artifact name="ProductProxy" groupId="com.example.ClientAssignment.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/proxy-services/ProductProxy.xml</file>
     </artifact>
+    <artifact name="ProductInSeq" groupId="com.example.ClientAssignment.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ProductInSeq.xml</file>
+    </artifact>
 </artifacts>
